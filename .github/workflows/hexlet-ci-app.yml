@@ -1,0 +1,21 @@
+name: Hexlet-Ci-APP
+
+on: push
+
+jobs:
+  buildAndTest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup node.js version 14
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: setup proj, start test, start lint
+      - run: |
+          make setup
+          make start
+          make test
+          make lint
+
