@@ -13,9 +13,8 @@ jobs:
         with:
           node-version: '14'
       - name: setup proj, start test, start lint
-      - run: |
-          make setup
-          make start
-          make test
-          make lint
+      - run: make setup
+      - run: make start
+      - run: make test
+      - run: make lint
 
