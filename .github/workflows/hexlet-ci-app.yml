@@ -9,12 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: setup node.js version 14
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
-      - name: setup proj, start test, start lint
+          node-version: '14' 
       - run: make setup
-      - run: make start
       - run: make test
       - run: make lint
 
